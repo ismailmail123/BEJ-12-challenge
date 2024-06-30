@@ -28,10 +28,7 @@ class UserRepository {
         return user;
     }
 
-    async getByIdItem(item_id) {
-        const user = await UserModel.findByPk(item_id);
-        return user;
-    }
+
 }
 
 module.exports = UserRepository;

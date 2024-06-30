@@ -39,7 +39,7 @@ const itemHandler = new ItemHandler(itemService);
 
 //Order
 const orderRepository = new OrderRepository();
-const orderService = new OrderService(orderRepository)
+const orderService = new OrderService(orderRepository, itemRepository)
 const orderHandler = new OrderHandler(orderService);
 
 // Auth 
@@ -55,9 +55,14 @@ app.get('/users/:email', userHandler.getByEmail);
 //product
 app.get('/items', itemHandler.getAll);
 app.post('/items', itemHandler.add);
+app.put('/items/:id', itemHandler.update);
+app.delete('/items/:id', itemHandler.remove);
 
 //order
 app.get('/orders', orderHandler.getAll);
+app.post('/orders', orderHandler.add);
+app.put('/orders/:id', orderHandler.update);
+app.delete('/orders/:id', orderHandler.remove);
 
 app.use((req, res, next) => {
     res.status(404).send({
