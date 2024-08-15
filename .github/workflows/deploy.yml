@@ -30,8 +30,8 @@ jobs:
 
             # Change to the project directory and execute the build script
             cd /BEJ-12-challenge
-            chmod +x ./build.sh
-            ./build.sh
-            #git pull origin main
-            #pm2 delete BEJ-12-challenge
-            #pm2 start main.js -n BEJ-12-challenge
+            #chmod +x ./build.sh
+            #./build.sh
+            git pull origin main
+            pm2 delete BEJ-12-challenge
+            pm2 start main.js -n BEJ-12-challenge
