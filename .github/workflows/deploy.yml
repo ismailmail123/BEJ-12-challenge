@@ -13,7 +13,7 @@ jobs:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
-          host: '35.223.45.220'
+          host: '34.28.113.111'
           username: 'root'
           key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
           port: 22
